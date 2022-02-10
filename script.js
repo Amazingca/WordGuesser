@@ -139,7 +139,8 @@ function listener(event) {
   if (event.keyCode === 13) {
 
     var word = `${row[attempt][0].value}${row[attempt][1].value}${row[attempt][2].value}${row[attempt][3].value}${row[attempt][4].value}`;
-
+    
+    window.alert(word);
     console.log(word);
 
     var occured = false;
