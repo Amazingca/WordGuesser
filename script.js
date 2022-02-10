@@ -65,9 +65,11 @@ function send(i, color, win) {
     row[attempt][i].disabled = true;
 
     setTimeout(function() {
-
+      
+      row[attempt][i].style.opacity = 1;
       if ((color === "#04AA6D") || (color === "#575757")) {
-
+        
+        row[attempt][i].style.webkitTextFillColor = "white";
         row[attempt][i].style.color = "white";
       }
 
