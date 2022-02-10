@@ -84,6 +84,11 @@ function send(i, color, win) {
           row[attempt][o].disabled = false;
         }
 
+        if (attempt >= 7) {
+
+          window.alert("Better luck next time!\nThe solution was '" + solution.toUpperCase() + "'");
+        }
+        
         row[attempt][0].focus();
         delay = 150;
       }
