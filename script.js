@@ -79,14 +79,15 @@ function send(i, color, win) {
 
         attempt++;
 
-        for (var o = 0; o < 5; o++) {
-
-          row[attempt][o].disabled = false;
-        }
-
         if (attempt >= 7) {
 
           window.alert("Better luck next time!\nThe solution was '" + solution.toUpperCase() + "'");
+        } else {
+          
+          for (var o = 0; o < 5; o++) {
+
+            row[attempt][o].disabled = false;
+          }
         }
         
         row[attempt][0].focus();
