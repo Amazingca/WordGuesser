@@ -81,7 +81,8 @@ function send(i, color, win) {
 
         if (attempt >= 7) {
 
-          window.alert("Better luck next time!\nThe solution was '" + solution.toUpperCase() + "'");
+          window.alert(`Better luck next time!\n\nThe word was "${solution}".\n\nWould you like to try again?`);
+          location.reload();
         } else {
           
           for (var o = 0; o < 5; o++) {
