@@ -52,6 +52,7 @@
 }
 
 .charboxbase.desktop:focus {
+  caret-color: transparent;
   padding: 1vh;
   border: 6px solid black;
 }
@@ -71,6 +72,7 @@
 }
 
 .charboxbase.mobile:focus {
+  caret-color: transparent;
   padding: 4.5vw;
   border: 18px solid black;
 }
