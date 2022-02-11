@@ -131,7 +131,7 @@ box.onkeyup = function(e) {
     typed[posi] = true;
   }
 
-  if ((pos.value != "") && (typed[posi] === true) && ((e.keyCode != 37) && (e.keyCode != 39))) {
+  if ((pos.value != "") && (typed[posi] === true) && ((e.keyCode != 37) && (e.keyCode != 39) && (e.keyCode != 13))) {
 
     pos.value = String.fromCharCode(e.keyCode);
   }
@@ -161,7 +161,7 @@ box.onkeyup = function(e) {
   } else if ((e.keyCode === 37) && (pos.previousElementSibling != undefined)) {
 
     pos.previousElementSibling.focus();
-  } else if ((e.keyCode === 13) && (e.nextElementSibling !== undefined)) {
+  } else if ((e.keyCode === 13) && (e.nextElementSibling != undefined)) {
 
     return;
   } else {
@@ -172,45 +172,6 @@ box.onkeyup = function(e) {
     }
   }
 }
-
-/*var container = document.getElementsByClassName("container")[attempt - 1];
-container.onkeyup = function(e) {
-
-    var tempLetter = "";
-    var target = e.srcElement || e.target;
-
-    if (target.attributes["maxlength"] === undefined) {
-
-      return;
-    } else {
-
-      var maxLength = parseInt(target.attributes["maxlength"].value, 10);
-    }
-    var myLength = target.value.length;
-    if (myLength >= maxLength) {
-        var next = target;
-        while (next = next.nextElementSibling) {
-            if (next == null) {
-                break;
-            } else if (next.tagName.toLowerCase() === "input") {
-                next.focus();
-                break;
-            }
-        }
-    }
-
-    else if (myLength === 0) {
-        var previous = target;
-        while (previous = previous.previousElementSibling) {
-            if (previous == null)
-                break;
-            if (previous.tagName.toLowerCase() === "input") {
-                previous.focus();
-                break;
-            }
-        }
-    }
-}*/
 
 var input = row[attempt][4];
 
