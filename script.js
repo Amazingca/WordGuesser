@@ -61,14 +61,15 @@ function send(i, color, win) {
 
   setTimeout(function() {
 
+    row[attempt][i].style.transition = "1s";
     row[attempt][i].style.transform = "rotateX(360deg)";
     row[attempt][i].disabled = true;
 
     setTimeout(function() {
-      
+
       row[attempt][i].style.opacity = 1;
       if ((color === "#04AA6D") || (color === "#575757")) {
-        
+
         row[attempt][i].style.webkitTextFillColor = "white";
         row[attempt][i].style.color = "white";
       }
@@ -84,13 +85,13 @@ function send(i, color, win) {
           window.alert(`Better luck next time!\n\nThe word was "${solution}".\n\nWould you like to try again?`);
           location.reload();
         } else {
-          
+
           for (var o = 0; o < 5; o++) {
 
             row[attempt][o].disabled = false;
           }
         }
-        
+
         row[attempt][0].focus();
         delay = 150;
       }
@@ -102,7 +103,45 @@ function send(i, color, win) {
 
 row[attempt][0].focus();
 
-var container = document.getElementsByClassName("container")[attempt - 1];
+var box = document.getElementsByClassName("container")[attempt - 1];
+//var typed = [];
+
+box.onkeyup = function(e) {
+
+  /*if (e.key.length === 1) {
+
+    typed.push(e.key);
+  }*/
+
+  var pos = e.srcElement;
+
+  if ((e.keyCode === 8) && (pos.previousElementSibling != undefined)) {
+
+    if (pos.value.length === 1) {
+
+      pos.value = "";
+      pos.previousElementSibling.focus();
+    } else if (pos.previousElementSibling.value.length === 1) {
+
+      pos.previousElementSibling.value = "";
+      pos.previousElementSibling.focus();
+    }
+  } else if ((e.keyCode === 37) && (pos.previousElementSibling != undefined)) {
+
+    pos.previousElementSibling.focus();
+  } else if ((e.keyCode === 13) && (e.nextElementSibling !== undefined)) {
+
+    return;
+  } else {
+
+    if ((pos.value.length === 1) && (pos.nextElementSibling != undefined)) {
+
+      pos.nextElementSibling.focus();
+    }
+  }
+}
+
+/*var container = document.getElementsByClassName("container")[attempt - 1];
 container.onkeyup = function(e) {
 
     var tempLetter = "";
@@ -139,7 +178,7 @@ container.onkeyup = function(e) {
             }
         }
     }
-}
+}*/
 
 var input = row[attempt][4];
 
@@ -147,9 +186,8 @@ function listener(event) {
 
   if (event.keyCode === 13) {
 
-    var word = `${row[attempt][0].value}${row[attempt][1].value}${row[attempt][2].value}${row[attempt][3].value}${row[attempt][4].value}`;
-    word = word.toLowerCase();
-    
+    var word = `${row[attempt][0].value}${row[attempt][1].value}${row[attempt][2].value}${row[attempt][3].value}${row[attempt][4].value}`.toLowerCase();
+
     console.log(word);
 
     var occured = false;
@@ -165,7 +203,6 @@ function listener(event) {
     if (occured === false) {
 
       console.log("Didn't occur");
-
 
       document.getElementsByClassName("rows")[attempt - 1].style.animation = "shake 1s";
 
@@ -226,21 +263,13 @@ function listener(event) {
   }
 };
 
-row[1][4].addEventListener("keyup", function(e) {
-  listener(e);
-});
-row[2][4].addEventListener("keyup", function(e) {
-  listener(e);
-});
-row[3][4].addEventListener("keyup", function(e) {
-  listener(e);
-});
-row[4][4].addEventListener("keyup", function(e) {
-  listener(e);
-});
-row[5][4].addEventListener("keyup", function(e) {
-  listener(e);
-});
-row[6][4].addEventListener("keyup", function(e) {
-  listener(e);
-});
+for (var i = 1; i < 7; i++) {
+
+  for (var o = 0; o < 5; o++) {
+    
+    row[i][o].addEventListener("keyup", function(e) {
+      
+      listener(e);
+    })
+  }
+}
