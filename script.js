@@ -104,26 +104,58 @@ function send(i, color, win) {
 row[attempt][0].focus();
 
 var box = document.getElementsByClassName("container")[attempt - 1];
-//var typed = [];
+var typed = {
+
+  0: false,
+  1: false,
+  2: false,
+  3: false,
+  4: false
+};
+var posi = 0;
 
 box.onkeyup = function(e) {
 
-  /*if (e.key.length === 1) {
-
-    typed.push(e.key);
-  }*/
-
   var pos = e.srcElement;
 
-  if ((e.keyCode === 8) && (pos.previousElementSibling != undefined)) {
+  for (var i = 0; i < 5; i++) {
 
-    if (pos.value.length === 1) {
+    if (pos.previousElementSibling === row[attempt][i - 1]) {
+
+      posi = i;
+    }
+  }
+
+  if ((pos.value != "") && (typed[posi] === false)) {
+
+    typed[posi] = true;
+  }
+
+  if ((pos.value != "") && (typed[posi] === true) && ((e.keyCode != 37) && (e.keyCode != 39))) {
+
+    pos.value = String.fromCharCode(e.keyCode);
+  }
+
+  if ((e.keyCode === 8) && (pos.value === "") && (typed[posi] === true)) {
+
+    typed[posi] = false;
+    return;
+  } else if ((e.keyCode === 8) && (pos.previousElementSibling != undefined)) {
+
+    if ((pos.value.length === 0) && pos.previousElementSibling.value.length === 1) {
+
+      typed[posi] = false;
+      pos.previousElementSibling.value = "";
+      typed[posi - 1] = false;
+      pos.previousElementSibling.focus();
+    } else if (pos.value.length === 1) {
 
       pos.value = "";
-      pos.previousElementSibling.focus();
+      typed[posi] = false;
     } else if (pos.previousElementSibling.value.length === 1) {
 
       pos.previousElementSibling.value = "";
+      typed[posi - 1] = false;
       pos.previousElementSibling.focus();
     }
   } else if ((e.keyCode === 37) && (pos.previousElementSibling != undefined)) {
@@ -266,9 +298,9 @@ function listener(event) {
 for (var i = 1; i < 7; i++) {
 
   for (var o = 0; o < 5; o++) {
-    
+
     row[i][o].addEventListener("keyup", function(e) {
-      
+
       listener(e);
     })
   }
