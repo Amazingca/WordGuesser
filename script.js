@@ -118,7 +118,6 @@ var posi = 0;
 
 box.onkeyup = function(e) {
   
-  e.keyCode = e.which;
   var pos = e.srcElement;
 
   for (var i = 0; i < 5; i++) {
@@ -136,7 +135,7 @@ box.onkeyup = function(e) {
 
   if ((pos.value != "") && (typed[posi] === true) && ((e.keyCode != 37) && (e.keyCode != 39) && (e.keyCode != 13))) {
 
-    pos.value = String.fromCharCode(e.keyCode);
+    pos.value = e.key.toUpperCase();
   }
 
   if ((e.keyCode === 8) && (pos.value === "") && (typed[posi] === true)) {
