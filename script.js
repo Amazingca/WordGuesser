@@ -118,7 +118,7 @@ var posi = 0;
 
 box.onkeyup = function(e) {
   
-  window.alert("The code was " + e.key + ". The converted was " + String.fromCharCode(e.key).charCodeAt(0));
+  e.keyCode = e.which;
   var pos = e.srcElement;
 
   for (var i = 0; i < 5; i++) {
