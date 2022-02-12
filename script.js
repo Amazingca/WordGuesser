@@ -117,9 +117,9 @@ var typed = {
 var posi = 0;
 var key = "";
 
-box.addEventListener("textInput", function(e) {
+box.addEventListener("input", function(e) {
 
-  key = e.data.toUpperCase();
+  key = e.data;
 });
 
 box.addEventListener('keyup', function(e) {
