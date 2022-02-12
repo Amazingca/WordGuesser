@@ -116,7 +116,7 @@ var typed = {
 };
 var posi = 0;
 
-box.onkeyup = function(e) {
+box.addEventListener('keyup', function(e) {
   
   var pos = e.srcElement;
 
@@ -135,7 +135,7 @@ box.onkeyup = function(e) {
 
   if ((pos.value != "") && (typed[posi] === true) && ((e.keyCode != 37) && (e.keyCode != 39) && (e.keyCode != 13))) {
 
-    pos.value = e.key.toUpperCase();
+    pos.value = String.fromCharCode(e.which);
   }
 
   if ((e.keyCode === 8) && (pos.value === "") && (typed[posi] === true)) {
