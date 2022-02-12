@@ -115,6 +115,12 @@ var typed = {
   4: false
 };
 var posi = 0;
+var key = "";
+
+box.addEventListener("textInput", function(e) {
+
+  key = e.data.toUpperCase();
+});
 
 box.addEventListener('keyup', function(e) {
   
@@ -135,7 +141,7 @@ box.addEventListener('keyup', function(e) {
 
   if ((pos.value != "") && (typed[posi] === true) && ((e.keyCode != 37) && (e.keyCode != 39) && (e.keyCode != 13))) {
 
-    pos.value = String.fromCharCode(e.which);
+    pos.value = key;
   }
 
   if ((e.keyCode === 8) && (pos.value === "") && (typed[posi] === true)) {
