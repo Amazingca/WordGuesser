@@ -173,7 +173,7 @@ box.addEventListener('keyup', function(e) {
       pos.nextElementSibling.focus();
     }
   }
-}
+});
 
 var input = row[attempt][4];
 
