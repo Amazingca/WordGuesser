@@ -119,7 +119,7 @@ var key = "";
 
 box.addEventListener("input", function(e) {
 
-  key = e.data;
+  key = e.data.split("");
 });
 
 box.addEventListener('keyup', function(e) {
@@ -141,7 +141,7 @@ box.addEventListener('keyup', function(e) {
 
   if ((pos.value != "") && (typed[posi] === true) && ((e.keyCode != 37) && (e.keyCode != 39) && (e.keyCode != 13))) {
 
-    pos.value = key;
+    pos.value = key[0];
   }
 
   if ((e.keyCode === 8) && (pos.value === "") && (typed[posi] === true)) {
