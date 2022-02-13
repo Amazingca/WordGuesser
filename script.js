@@ -169,6 +169,7 @@ box.addEventListener('keyup', function(e) {
   } else if ((e.keyCode === 37) && (pos.previousElementSibling != undefined)) {
 
     pos.previousElementSibling.focus();
+    pos.previousElementSibling.select();
   } else if ((e.keyCode === 13) && (e.nextElementSibling != undefined)) {
 
     return;
@@ -177,6 +178,7 @@ box.addEventListener('keyup', function(e) {
     if ((pos.value.length === 1) && (pos.nextElementSibling != undefined)) {
 
       pos.nextElementSibling.focus();
+      pos.nextElementSibling.select();
     }
   }
 });
