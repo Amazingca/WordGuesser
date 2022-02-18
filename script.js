@@ -115,6 +115,61 @@ var typed = {
   4: false
 };
 var posi = 0;
+var keyCache = [];
+var keyPrev;
+
+/*box.addEventListener("input", function(e) {
+
+  if (e.data != " ") {
+
+    keyCache.push(e.data);
+
+    fill(e);
+  } else {
+
+    e.srcElement.value = "";
+  }
+});*/
+
+box.addEventListener('keyup', function(e) {
+
+  if (e.key != " ") {
+
+    keyCache.push(e.key);
+
+    fill(e);
+  } else {
+
+    e.srcElement.value = "";
+  }
+
+
+  if ((e.keyCode === 32) && (e.srcElement.nextElementSibling != null)) {
+
+    e.srcElement.nextElementSibling.focus();
+  }
+});
+
+function fill(e) {
+
+  var pos = e.srcElement;
+
+  if (keyPrev === undefined) {
+
+    pos.value = keyCache[0];
+    keyPrev = pos;
+    keyCache.splice(keyCache.indexOf(0), 1);
+    pos.nextElementSibling.focus();
+  } else if ((keyPrev === pos.previousElementSibling) && (pos.nextElementSibling != null)) {
+
+    pos.value = keyCache[0];
+    keyPrev = pos;
+    keyCache.splice(keyCache.indexOf(0), 1);
+    pos.nextElementSibling.focus();
+  }
+}
+
+/*var posi = 0;
 var key = "";
 
 box.addEventListener("input", function(e) {
@@ -181,7 +236,7 @@ box.addEventListener('keyup', function(e) {
       pos.nextElementSibling.select();
     }
   }
-});
+});*/
 
 var input = row[attempt][4];
 
