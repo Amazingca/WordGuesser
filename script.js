@@ -118,7 +118,7 @@ var posi = 0;
 var keyCache = [];
 var keyPrev;
 
-/*box.addEventListener("input", function(e) {
+box.addEventListener("input", function(e) {
 
   if (e.data != " ") {
 
@@ -129,20 +129,9 @@ var keyPrev;
 
     e.srcElement.value = "";
   }
-});*/
+});
 
 box.addEventListener('keyup', function(e) {
-
-  if (e.key != " ") {
-
-    keyCache.push(e.key);
-
-    fill(e);
-  } else {
-
-    e.srcElement.value = "";
-  }
-
 
   if ((e.keyCode === 32) && (e.srcElement.nextElementSibling != null)) {
 
