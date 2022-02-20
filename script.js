@@ -208,6 +208,14 @@ box.addEventListener('keyup', function(e) {
       pos.previousElementSibling.value = "";
       keyMainCache[posi - 1] = "";
       pos.previousElementSibling.focus();
+
+      if (pos.previousElementSibling.previousElementSibling === null) {
+
+        keyPrev = undefined;
+      } else {
+
+        keyPrev = pos.previousElementSibling.previousElementSibling;
+      }
     } else if (pos.value.length === 1) {
 
       pos.value = "";
@@ -217,6 +225,14 @@ box.addEventListener('keyup', function(e) {
       pos.previousElementSibling.value = "";
       keyMainCache[posi - 1] = "";
       pos.previousElementSibling.focus();
+
+      if (pos.previousElementSibling.previousElementSibling === null) {
+
+        keyPrev = undefined;
+      } else {
+
+        keyPrev = pos.previousElementSibling.previousElementSibling;
+      }
     }
   }
 });
