@@ -88,6 +88,9 @@ function send(i, color, win) {
           location.reload();
         } else {
 
+          keyPrev = undefined;
+          box = document.getElementsByClassName("container")[attempt - 1];
+
           for (var o = 0; o < 5; o++) {
 
             row[attempt][o].disabled = false;
@@ -104,7 +107,6 @@ function send(i, color, win) {
 }
 
 row[attempt][0].focus();
-
 var box = document.getElementsByClassName("container")[attempt - 1];
 var typed = {
 
@@ -149,7 +151,7 @@ box.addEventListener("input", function(e) {
   }
 });
 
-box.addEventListener('keyup', function(e) {
+box.addEventListener("onkeyup", function(e) {
 
   var pos = e.srcElement;
 
@@ -201,6 +203,21 @@ box.addEventListener('keyup', function(e) {
   }
 
   if ((e.keyCode === 8) && (pos.previousElementSibling != undefined)) {
+
+    if ((pos.value.length === 0) && (pos.previousElementSibling.value.length === 0)) {
+
+      pos.previousElementSibling.focus();
+
+      if (pos.previousElementSibling.previousElementSibling === null) {
+
+        keyPrev = undefined;
+      } else {
+
+        keyPrev = pos.previousElementSibling.previousElementSibling;
+      }
+
+      pos.previousElementSibling.select();
+    }
 
     if ((pos.value.length === 0) && pos.previousElementSibling.value.length >= 1) {
 
@@ -513,8 +530,14 @@ function listener(event) {
           send(i, final[i], false);
         }
 
-        input = row[attempt][4];
-        box = document.getElementsByClassName("container")[attempt - 1];
+        keyMainCache = {
+
+          1: "",
+          2: "",
+          3: "",
+          4: "",
+          5: ""
+        };
       }
     }
   }
