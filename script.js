@@ -202,7 +202,7 @@ box.addEventListener('keyup', function(e) {
 
   if ((e.keyCode === 8) && (pos.previousElementSibling != undefined)) {
 
-    if ((pos.value.length === 0) && pos.previousElementSibling.value.length === 1) {
+    if ((pos.value.length === 0) && pos.previousElementSibling.value.length >= 1) {
 
       keyMainCache[posi] = "";
       pos.previousElementSibling.value = "";
@@ -216,11 +216,19 @@ box.addEventListener('keyup', function(e) {
 
         keyPrev = pos.previousElementSibling.previousElementSibling;
       }
-    } else if (pos.value.length === 1) {
+    } else if (pos.value.length >= 1) {
 
       pos.value = "";
       keyMainCache[posi] = "";
-    } else if (pos.previousElementSibling.value.length === 1) {
+
+      if (pos.previousElementSibling.previousElementSibling === null) {
+
+        keyPrev = undefined;
+      } else {
+
+        keyPrev = pos.previousElementSibling.previousElementSibling;
+      }
+    } else if (pos.previousElementSibling.value.length >= 1) {
 
       pos.previousElementSibling.value = "";
       keyMainCache[posi - 1] = "";
