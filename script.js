@@ -151,7 +151,7 @@ box.addEventListener("input", function(e) {
   }
 });
 
-box.addEventListener("onkeyup", function(e) {
+box.addEventListener("keyup", function(e) {
 
   var pos = e.srcElement;
 
