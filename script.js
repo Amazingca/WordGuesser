@@ -1,3 +1,4 @@
+// Copyright 2022 - Amazingca.
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
   console.log("We are running mobile!");
