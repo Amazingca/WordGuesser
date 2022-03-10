@@ -77,24 +77,14 @@ if (solution) {
 function begin(i, adj) {
 
   var load = 0;
+  var innerLoad = 0;
 
   setTimeout(function() {
 
     for (var o = 0; o < 5; o++) {
 
-      row[i][o].style.transition = "1000ms";
-
-      if (adj === true) {
-
-        row[i][o].style.transform = "rotateX(360deg) rotateY(360deg)";
-
-        resetTransitionDelay(i, o);
-      } else {
-
-        row[i][o].style.transform = "rotateX(360deg) rotateY(360deg)";
-
-        resetTransitionDelay(i, o);
-      }
+      innerBegin(i, o, adj, innerLoad);
+      innerLoad = innerLoad + 100;
     }
   }, beginLoad);
 }
