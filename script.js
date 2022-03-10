@@ -89,6 +89,27 @@ function begin(i, adj) {
   }, beginLoad);
 }
 
+function innerBegin(i, o, adj, innerLoad) {
+
+  setTimeout(function() {
+
+    row[i][o].style.transition = "1000ms";
+
+    if (adj === true) {
+
+      row[i][o].style.transform = "rotateX(360deg) rotateY(360deg)";
+
+      resetTransitionDelay(i, o);
+    } else {
+
+      row[i][o].style.transform = "rotateX(360deg) rotateY(360deg)";
+
+      resetTransitionDelay(i, o);
+    }
+
+  }, innerLoad);
+}
+
 function resetTransitionDelay(i, o) {
 
   setTimeout(function() {
