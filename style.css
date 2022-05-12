@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
 .title.desktop {
   white-space: nowrap;
   text-align: center;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 0.1em;
   user-select: none;
 }
 
@@ -11,8 +14,8 @@
   white-space: nowrap;
   font-size: 50px;
   text-align: center;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 0.1em;
   user-select: none;
 }
 
@@ -127,7 +130,21 @@ input::selection{
   opacity: 100;
 }
 
+.footer {
+  white-space: nowrap;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  user-select: none;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding-top: 1rem;
+}
+
 body {
   margin: 0;
   padding: 0;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
 }
