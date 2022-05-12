@@ -147,3 +147,7 @@ body {
   grid-template-rows: 1fr;
   min-height: 100vh;*/
 }
+
+#my{
+  zoom: 90%;
+  }
