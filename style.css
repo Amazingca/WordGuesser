@@ -7,6 +7,8 @@
   font-family: 'Shrikhand', cursive;
   letter-spacing: 0.1em;
   user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .title.mobile {
@@ -15,6 +17,8 @@
   text-align: center;
   font-family: 'Shrikhand', cursive;
   user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .rows {
@@ -136,6 +140,8 @@ input::selection{
   color: rgb(0, 0, 0);
   text-decoration: none;
   padding-top: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
