@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-
 .title.desktop {
   white-space: nowrap;
   text-align: center;
@@ -14,6 +13,7 @@
 .title.mobile {
   white-space: nowrap;
   font-size: 60px;
+  margin: 0 auto;
   text-align: center;
   font-family: 'Shrikhand', cursive;
   user-select: none;
