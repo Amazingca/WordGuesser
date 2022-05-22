@@ -1,0 +1,10 @@
+{
+    "lang": "en",
+    "short_name": "Word Guesser",
+    "name": "Word Guesser 2",
+    "description": "A better word guesser.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#5f7995",
+    "theme_color": "#5f7995"
+}
