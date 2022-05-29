@@ -1,2 +1,2 @@
 # WordGuesser
-This is a thing I made in a day. I adapted it from [Wordle](https://www.powerlanguage.co.uk/wordle/), a fancy word guessing game.
+This is a thing I made in a day. I adapted it from [Wordle](https://www.powerlanguage.co.uk/wordle/), a fancy word guessing game. While the guesser is not meant to compete with Wordle, it is a different word guesser. Why not [give it a try?](https://words.amazingca.dev)
