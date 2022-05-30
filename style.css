@@ -2,10 +2,10 @@
 
 .title.desktop {
   white-space: nowrap;
-  text-align: center;
   font-family: 'Shrikhand', cursive;
   letter-spacing: 0.1em;
   user-select: none;
+  -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,9 +13,9 @@
 .title.mobile {
   white-space: nowrap;
   font-size: 60px;
-  text-align: center;
   font-family: 'Shrikhand', cursive;
   user-select: none;
+  -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -150,6 +150,7 @@ input::selection{
 body {
   margin: 0;
   padding: 0;
+  background: #f5f5f5;
 
   /*display: grid;
   grid-template-rows: 1fr;
