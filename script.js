@@ -39,6 +39,9 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
     document.getElementsByClassName('title')[0].classList.remove("mobile");
     document.getElementsByClassName('title')[0].classList.add("desktop");
+
+    document.getElementsByClassName('h1')[0].classList.remove("hide");
+    document.getElementsByClassName('h2')[0].classList.add("hide");
   });
 }
 
