@@ -66,20 +66,23 @@
   font-size: 75px;
   font-weight: bolder;
   width: 4rem;
-  height: 5rem;
+  height: 6.5rem;
   background-color: lightgrey;
   display: inline-block;
   text-transform: uppercase;
   text-align: center;
   transition: 0.1s;
-  border-radius: 70px 0px 70px 0px / 70px 0px 70px 0px;
+  border-radius: 60px 0px 60px 0px / 60px 0px 60px 0px;
 }
 
 .charboxbase.mobile:focus {
   caret-color: transparent;
-  padding: 4.5vw;
   border: 18px solid black;
-  border-radius: 40px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 3.5vw;
+  padding-bottom: 3.5vw;
+  border-radius: 60px;
 }
 
 ::selection {
