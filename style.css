@@ -61,19 +61,18 @@
 }
 
 .charboxbase.mobile {
-  margin: 3vw;
+  margin: 1vw;
   border: 12px solid black;
   font-size: 75px;
-  padding: 51px;
   font-weight: bolder;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 4rem;
+  height: 5rem;
   background-color: lightgrey;
   display: inline-block;
   text-transform: uppercase;
   text-align: center;
   transition: 0.1s;
-  border-radius: 40px 0px 40px 0px / 40px 0px 40px 0px;
+  border-radius: 70px 0px 70px 0px / 70px 0px 70px 0px;
 }
 
 .charboxbase.mobile:focus {
