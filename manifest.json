@@ -7,11 +7,11 @@
     "display": "standalone",
     "background_color": "#5f7995",
     "theme_color": "#5f7995",
-        "icons": [
-            {
-              "src": "./manifesticon.png",
-              "type": "image/png",
-              "sizes": "1200x1200"
-            }
-          ]
+     "icons": [
+      {
+       "src": "./manifesticon.png",
+       "type": "image/png",
+       "sizes": "1200x1200"
+      }
+    ]
 }
