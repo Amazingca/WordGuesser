@@ -1,18 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-.title.desktop {
+.title {
   white-space: nowrap;
-  font-family: 'Shrikhand', cursive;
-  letter-spacing: 0.1em;
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.title.mobile {
-  white-space: nowrap;
-  font-size: 60px;
   font-family: 'Shrikhand', cursive;
   user-select: none;
   -webkit-user-select: none;
