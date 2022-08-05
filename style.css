@@ -148,6 +148,7 @@ input::selection{
   text-align: center;
   font-family: 'Shrikhand', cursive;
   user-select: none;
+  font-size: 1em;
   color: rgb(0, 0, 0);
   text-decoration: none;
   padding-top: 1rem;
