@@ -102,7 +102,7 @@ function resetTransitionDelay(i, o) {
 
   setTimeout(function() {
 
-    row[i][o].style.transition = "0.1s";
+    row[i][o].style.transition = "0.3s";
   }, 100);
 }
 
