@@ -18,13 +18,13 @@
 }
 
 .separate.desktop {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .separate.mobile {
-  padding-top: 29px;
-  padding-bottom: 29px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .charboxbase.desktop {
