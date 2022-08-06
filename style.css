@@ -67,10 +67,10 @@
 .charboxbase.mobile:focus {
   caret-color: transparent;
   border: 11px solid black;
-  padding-left: 5vw;
+  /*padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem;*/
   border-radius: 60px;
 }
 
@@ -79,11 +79,11 @@ input[type=text] {
 }
 
 ::selection {
-  background: transparent; /* WebKit/Blink Browsers */
+  background: transparent;
 }
 
 ::-moz-selection {
-  background: transparent; /* Gecko Browsers */
+  background: transparent;
 }
 
 @keyframes shake {
