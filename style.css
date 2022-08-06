@@ -66,11 +66,11 @@
 
 .charboxbase.mobile:focus {
   caret-color: transparent;
-  border: 18px solid black;
+  border: 11px solid black;
   padding-left: 5vw;
   padding-right: 5vw;
-  padding-top: 3.5vw;
-  padding-bottom: 3.5vw;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 60px;
 }
 
