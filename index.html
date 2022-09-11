@@ -22,7 +22,7 @@
   </head>
   <body>
     <br>
-    <div class="title" style="text-align: center; width: 100vw; font-size: 2.5em;">word guesser 2</div>
+    <div data-nosnippet class="title" style="text-align: center; width: 100vw; font-size: 2.5em;">word guesser 2</div>
     <div class="container" style="padding-top: 50px;">
       <div class="rows">
         <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row1 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
@@ -67,12 +67,14 @@
         <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row6 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
       </div>
     </div>
-    <div class="end" hidden="true">
+    <div data-nosnippet class="end" hidden="true">
       <div class="win">You win!</div>
       <div class="lose">You lose.</div>
     </div>
     <footer class="footer">
-      <a href="https://amazingca.dev" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;" style="cursor: pointer;" class="footer">About the Developer</a>
+      <div data-nosnippet>
+        <a href="https://amazingca.dev" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;" style="cursor: pointer;" class="footer">About the Developer</a>
+      </div>
     </footer>
   </body>
   <script src="./script.js"></script>
