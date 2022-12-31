@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta property="og:locale" content="en-US">
     <title>Word Guesser 2</title>
-    <link type="text/css" rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" href="./logo.png">
+    <link type="text/css" rel="stylesheet" href="https://words.amazingca.dev/style.css">
+    <link rel="icon" type="image/png" href="https://words.amazingca.dev/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale: 1, maximum-scale=1">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@wordguesser" />
@@ -24,60 +24,55 @@
   </head>
   <body>
     <br>
-    <div data-nosnippet class="title" style="text-align: center; width: 100vw; font-size: 2.5em;">word guesser 2</div>
-    <div class="container" style="padding-top: 50px;">
-      <div class="rows">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row1 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row1 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row1 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row1 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row1 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
+    <div class="container">
+      <div data-nosnippet class="title" style="text-align: center; width: auto; font-size: 2.5em;">word guesser 2</div>
+      <div id="grid">
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row1 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row1 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row1 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row1 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row1 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text">
+
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row2 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row2 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row2 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row2 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row2 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row3 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row3 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row3 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row3 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row3 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row4 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row4 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row4 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row4 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row4 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row5 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row5 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row5 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row5 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row5 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row6 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row6 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row6 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row6 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+          <input style="transform: rotateX(180deg) rotateY(180deg);" class="newbase row6 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled> 
       </div>
-      <div class="rows separate">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row2 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row2 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row2 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row2 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row2 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
+      <div data-nosnippet class="end">
+        <div id="win">You win!</div>
+        <div id="lose">You lose.</div>
       </div>
-      <div class="rows">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row3 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row3 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row3 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row3 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row3 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-      </div>
-      <div class="rows separate">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row4 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row4 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row4 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row4 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row4 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-      </div>
-      <div class="rows">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row5 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row5 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row5 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row5 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row5 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-      </div>
-      <div class="rows separate">
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row6 input1" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row6 input2" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row6 input3" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row6 input4" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-        <input style="transform: rotateX(180deg) rotateY(180deg);" class="charboxbase row6 input5" maxlength="1" onclick="this.select(); keyPrev = undefined;" type="text" disabled>
-      </div>
+      <footer class="footer">
+        <div data-nosnippet>
+          <a href="https://amazingca.dev" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;" style="cursor: pointer;" class="footer">About the Developer</a>
+        </div>
+      </footer>
     </div>
-    <div data-nosnippet class="end" hidden="true">
-      <div class="win">You win!</div>
-      <div class="lose">You lose.</div>
-    </div>
-    <footer class="footer">
-      <div data-nosnippet>
-        <a href="https://amazingca.dev" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;" style="cursor: pointer;" class="footer">About the Developer</a>
-      </div>
-    </footer>
   </body>
-  <script src="./script.js"></script>
+  <script src="https://words.amazingca.dev/script.js"></script>
 </html>
